@@ -1,0 +1,14 @@
+function occurance(string, searchElement) {
+    return string
+        .replace(' ', '')
+        .split('')
+        .reduce((accumulator, currentValue) => {
+            const occurance = (searchElement === currentValue) ? 1 : 0;
+            console.log(accumulator, currentValue, searchElement)
+            return occurance + accumulator;
+        }, 0);
+}
+let string = 'brown operator ( hope)';
+let output = occurance(string, 'o')
+
+console.log(output);
